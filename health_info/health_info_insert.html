@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en" ng-app = "ajboapp">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>บทบาททางสังคมปัจจุบัน</title>
+  </head>
+  <body ng-controller="Orders_ctrl">
+    <h1>บทบาททางสังคมปัจจุบัน</h1>
+    <form ng-submit ="senddata()">
+
+  <div class="row mb-3">
+    <label for="input1" class="col-sm-2 col-form-label">IDCard</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="input1" ng-model="f.a">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="input2" class="col-sm-2 col-form-label">ID_Year</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="input2" ng-model="f.b">
+    </div>
+  </div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Wg</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.c">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Hg</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.d">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Wline</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.e">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">BP1</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.f">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">BP2</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.g">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Cdis1</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.h">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Phydis</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.i">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Smoking</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.j">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Smoking_year</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.k">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Alcohol</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.l">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Algohol_year</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.m">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Mact</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.n">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL1</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.o">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL2</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.p">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL3</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.q">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL4</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.r">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL5</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.s">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL6</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.t">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL7</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.u">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL8</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.v">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL9</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.w">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">ADL10</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.x">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Resualt_ADL</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.y">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Results_diabetes</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.z">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Results_hypertension</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.aa">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Teeth</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.bb">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Results_eye1</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.cc">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Feel_depressed</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.dd">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Feel_bored</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.ee">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Assess_remembers1</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.ff">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Assess_remembers2</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.gg">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Assess_fall</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.hh">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Urinary</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.ii">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Assess_sleep</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.jj">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Sleep_day</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.kk">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Assess_knee</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.ll">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Body_mass_value</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.mm">
+  </div>
+</div>
+</div>
+<div class="row mb-3">
+  <label for="input2" class="col-sm-2 col-form-label">Body_mass</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="input2" ng-model="f.nn">
+  </div>
+</div>
+  
+  <div class="row mb-3">
+    <div class="col-sm-10 offset-sm-2">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">บันทึก</button>
+</form>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  สถานะการบันทึกข้อมูล
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">สถานะการบันทึกข้อมูล</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{bobo}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+  <script src="health_info.js"></script>
+</html>
