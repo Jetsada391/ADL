@@ -1,0 +1,17 @@
+<?php
+include "db_connect.php";
+
+$sql_cmd = "INSERT INTO `preexisting_condition` (`IDCard`, `PcdisID`, `ID_Year`, `PcdisName`) 
+            VALUES ('{$y->a}', '{$y->b}', '{$y->c}', '{$y->d}');";
+
+//echo $sql_cmd;
+if ($conn->query($sql_cmd) === TRUE) 
+{
+  echo "1";
+} else {
+  echo "0";
+
+}
+$conn->close();
+
+?>

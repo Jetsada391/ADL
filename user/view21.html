@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" ng-app="ajboapp">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <!-- angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="view.js"></script>
+
+    <title>ttttt</title>
+</head>
+
+<body ng-controller="views">
+    
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#">การประเมินสภาวะสุขภาพ</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">ประวัติส่วนตัว</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">สุขภาวะ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading3">ADL</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">เมนู</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#scrollspyHeading1">ประวัติส่วนตัว</a></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading2">สุขภาวะ</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading3">ADL</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div  > 
+      <div style="height: 500px; overflow-y: scroll;" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h4 id="scrollspyHeading1">ประวัติส่วนตัว</h4>
+        <form ng-submit="senddata()">
+            <p>
+
+            <div class="container">
+                <p>สถานะภาพการสมรส</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="status" id="radio0" value="1" ng-model="form.status">
+                    <label class="form-check-label" for="radio0">
+                        โสด
+                    </label>
+                </div>
+    
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="status" id="radio1" value="2" ng-model="form.status">
+                    <label class="form-check-label" for="radio1">
+                        สมรส
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="status" id="radio0" value="3" ng-model="form.status">
+                    <label class="form-check-label" for="radio0">
+                        หม้าย
+                    </label>
+                </div>
+    
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="status" id="radio1" value="4" ng-model="form.status">
+                    <label class="form-check-label" for="radio1">
+                        หย่าร้าง/แยกย้าย
+                    </label>
+                </div>
+            </div>
+    
+            <div class="container">
+                <p>สถานการณ์อยู่อาศัย(เลือกคำตอบได้มากกว่า1ข้อ)</p>
+                <div class="form-check">
+                    <input ng-true-value="1" class="form-check-input" type="checkbox"  name="situation" id="checkbox0" value="1" ng-model="form.situation">
+                    <label class="form-check-label" for="checkbox0">
+                        อยู่ลำพัง
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="2" class="form-check-input" type="checkbox" name="situation"  id="checkbox" value="2" ng-model="form.situation1"
+                    ng-true-value="2"  >
+                    <label class="form-check-label" for="checkbox">
+                        มีคู่สมรส
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="3" class="form-check-input" type="checkbox" name="situation"  id="checkbox" value="3" ng-model="form.situation2"    ng-true-value="3" >
+                    <label class="form-check-label" for="checkbox">
+                        มีลูกหลานดูแล
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="4" class="form-check-input" type="checkbox" name="situation" id="checkbox" value="4" ng-model="form.situation3">
+                    <label class="form-check-label" for="checkbox">
+                        มีพี่น้องดูแล
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="5" class="form-check-input" type="checkbox" name="situation" id="checkbox" value="5" ng-model="form.situation4">
+                    <label class="form-check-label" for="checkbox">
+                        มีญาติดูแล
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="6" class="form-check-input" type="checkbox" name="situation" id="checkbox" value="6" ng-model="form.situation5">
+                    <label class="form-check-label" for="checkbox">
+                        ไม่มีผู้ดูแล
+                    </label>
+                </div>
+                </div>
+                <hr>
+                <div class="form-check">
+                    <input ng-true-value="1" class="form-check-input" type="checkbox" id="checkbox1" name="Phydis" value="1" ng-model="form.phydis1">
+                    <label class="form-check-label" for="checkbox1">
+                        พิการร่างกายและเคลื่อนไหว
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="2" class="form-check-input" type="checkbox" id="checkbox2" name="Phydis" value="2" ng-model="form.phydis2">
+                    <label class="form-check-label" for="checkbox2">
+                        พิการทางสายตา
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="3" class="form-check-input" type="checkbox" id="checkbox3" name="Phydis" value="3" ng-model="form.phydis3">
+                    <label class="form-check-label" for="checkbox3">
+                        พิการทางหู
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="4" class="form-check-input" type="checkbox" id="checkbox4" name="Phydis" value="4" ng-model="form.phydis4">
+                    <label class="form-check-label" for="checkbox4">
+                        พิการทางสติปัญญาและการเรียนรู้
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="5" class="form-check-input" type="checkbox" id="checkbox5" name="Phydis" value="5" ng-model="form.phydis5">
+                    <label class="form-check-label" for="checkbox5">
+                        พิการทางจิตใจ/พฤติกรรม
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input ng-true-value="6" class="form-check-input" type="checkbox" id="checkbox6" name="Phydis" value="6" ng-model="form.phydis6">
+                    <label class="form-check-label" for="checkbox6">
+                        ออทิสติก
+                    </label>
+                </div>
+            </div>
+    
+              
+        <div class="row mb-3">
+            <div class="col-sm-10 offset-sm-2"></div>
+        </div>
+        <button type="submit" class="btn btn-primary" >
+            บันทึก
+        </button>
+        </form>
+      </div>
+    </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">{{bobo}}</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
